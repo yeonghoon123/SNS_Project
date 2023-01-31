@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: block;
+    margin-left: 64px;
+    max-width: calc(100% - 64px);
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1263px) {
+    section {
+        margin-left: 135px;
+        max-width: calc(100% - 135px);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-left: 0px;
+        max-width: 100%;
+        margin: 64px 0;
+    }
+}

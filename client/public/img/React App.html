@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="icon" href="http://localhost:3000/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="description"
+            content="Web site created using create-react-app"
+        />
+        <link rel="stylesheet" href="./React App_files/icon" />
+        <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png" />
+
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+        <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+        <title>React App</title>
+        <script defer="" src="./React App_files/bundle.js"></script>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            .App {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                margin-left: 64px;
+                width: 100%;
+                max-width: 1440px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            @media (max-width: 768px) {
+                section {
+                    margin-left: 0px;
+                    margin: 64px 0;
+                }
+            }
+
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvYXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7SUFDVixTQUFTO0FBQ2I7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixXQUFXO0lBQ1gsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0kscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0k7UUFDSSxnQkFBZ0I7UUFDaEIsY0FBYztJQUNsQjtBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XG4gICAgcGFkZGluZzogMDtcbiAgICBtYXJnaW46IDA7XG59XG5cbi5BcHAge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG5zZWN0aW9uIHtcbiAgICBtYXJnaW4tbGVmdDogNjRweDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXgtd2lkdGg6IDE0NDBweDtcbn1cblxuYSB7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNjIwcHgpIHtcbiAgICBzZWN0aW9uIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDBweDtcbiAgICAgICAgbWFyZ2luOiA2NHB4IDA7XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+        </style>
+        <style>
+            .mainPost_container__vD2Rq {
+                width: 100%;
+            }
+
+            .mainPost_post_container__f4Thr {
+                max-width: 470px;
+                width: 100%;
+                display: flex;
+                flex-flow: column wrap;
+                margin: 20px auto;
+            }
+
+            .mainPost_post_area__JoiUu {
+                width: 100%;
+                border: 1px solid black;
+                margin: 20px 0;
+            }
+
+            .mainPost_post_profile_area__Ealor {
+                max-width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: left;
+                border: 1px solid black;
+                padding: 10px 10px;
+            }
+
+            .mainPost_post_profile_img_area__TWZWn {
+                width: 42px;
+            }
+
+            .mainPost_post_profile_img__KuQg8 {
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                border: 1px solid;
+            }
+
+            .mainPost_post_profile_text_area__ab4vd {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: left;
+                align-items: center;
+                margin-left: 10px;
+            }
+
+            .mainPost_post_upload_date__F45PS {
+                font-size: 12px;
+                color: #696969;
+            }
+
+            .mainPost_post_id_date_division__W-JJm {
+                margin: 0 5px;
+            }
+
+            .mainPost_post_more_area__zuNWQ {
+                margin-left: auto;
+            }
+
+            .mainPost_post_img_area__K\+Gnc {
+                max-width: 470px;
+                height: 100%;
+            }
+
+            .mainPost_post_img__2kjzD {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: fill;
+            }
+
+            .mainPost_post_content_area__yXp2x {
+                padding: 10px 10px;
+                border: 1px solid black;
+            }
+
+            .mainPost_post_content_reaction_area__XlFR- {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .mainPost_post_reaction_like_area__dywBs {
+                margin-right: 5px;
+            }
+
+            .mainPost_post_reaction_interest_area__BJf-w {
+                margin-left: auto;
+            }
+
+            .mainPost_post_reaction_like_text_area__5vThC {
+                font-size: 12px;
+            }
+
+            .mainPost_post_conetnt_comment__WgGy7 {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            .mainPost_post_conetnt_total_comment__IC9o1 {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            .mainPost_post_content_upload_comment_area__v2S71 {
+                margin: 10px 0;
+            }
+
+            .mainPost_post_content_upload_comment__Uv07b {
+                width: 100%;
+                height: 30px;
+                background-color: #f6f6f6;
+                border: none;
+                outline: none;
+                resize: none;
+            }
+
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvbWFpbi9tYWluUG9zdC5tb2R1bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCx1QkFBdUI7SUFDdkIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixxQkFBcUI7SUFDckIsdUJBQXVCO0lBQ3ZCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7QUFDZjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIscUJBQXFCO0lBQ3JCLG1CQUFtQjtJQUNuQixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxXQUFXO0lBQ1gsWUFBWTtJQUNaLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCxlQUFlO0FBQ25COztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1oseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixhQUFhO0lBQ2IsWUFBWTtBQUNoQiIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xuICAgIHdpZHRoOiAxMDAlO1xufVxuXG4ucG9zdF9jb250YWluZXIge1xuICAgIG1heC13aWR0aDogNDcwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWZsb3c6IGNvbHVtbiB3cmFwO1xuICAgIG1hcmdpbjogMjBweCBhdXRvO1xufVxuXG4ucG9zdF9hcmVhIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgICBtYXJnaW46IDIwcHggMDtcbn1cblxuLnBvc3RfcHJvZmlsZV9hcmVhIHtcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWZsb3c6IHJvdyB3cmFwO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBsZWZ0O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xuICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbn1cblxuLnBvc3RfcHJvZmlsZV9pbWdfYXJlYSB7XG4gICAgd2lkdGg6IDQycHg7XG59XG5cbi5wb3N0X3Byb2ZpbGVfaW1nIHtcbiAgICB3aWR0aDogMzJweDtcbiAgICBoZWlnaHQ6IDMycHg7XG4gICAgYm9yZGVyLXJhZGl1czogMTAwJTtcbiAgICBib3JkZXI6IDFweCBzb2xpZDtcbn1cblxuLnBvc3RfcHJvZmlsZV90ZXh0X2FyZWEge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW4tbGVmdDogMTBweDtcbn1cblxuLnBvc3RfdXBsb2FkX2RhdGUge1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICBjb2xvcjogIzY5Njk2OTtcbn1cblxuLnBvc3RfaWRfZGF0ZV9kaXZpc2lvbiB7XG4gICAgbWFyZ2luOiAwIDVweDtcbn1cblxuLnBvc3RfbW9yZV9hcmVhIHtcbiAgICBtYXJnaW4tbGVmdDogYXV0bztcbn1cblxuLnBvc3RfaW1nX2FyZWEge1xuICAgIG1heC13aWR0aDogNDcwcHg7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ucG9zdF9pbWcge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogYXV0bztcbiAgICBvYmplY3QtZml0OiBmaWxsO1xufVxuXG4ucG9zdF9jb250ZW50X2FyZWEge1xuICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbn1cblxuLnBvc3RfY29udGVudF9yZWFjdGlvbl9hcmVhIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZmxvdzogcm93IHdyYXA7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xufVxuLnBvc3RfcmVhY3Rpb25fbGlrZV9hcmVhIHtcbiAgICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cblxuLnBvc3RfcmVhY3Rpb25faW50ZXJlc3RfYXJlYSB7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XG59XG5cbi5wb3N0X3JlYWN0aW9uX2xpa2VfdGV4dF9hcmVhIHtcbiAgICBmb250LXNpemU6IDEycHg7XG59XG5cbi5wb3N0X2NvbmV0bnRfY29tbWVudCB7XG4gICAgbWFyZ2luOiAxMHB4IDA7XG4gICAgZm9udC1zaXplOiAxNHB4O1xufVxuXG4ucG9zdF9jb25ldG50X3RvdGFsX2NvbW1lbnQge1xuICAgIG1hcmdpbjogMTBweCAwO1xuICAgIGZvbnQtc2l6ZTogMTRweDtcbn1cblxuLnBvc3RfY29udGVudF91cGxvYWRfY29tbWVudF9hcmVhIHtcbiAgICBtYXJnaW46IDEwcHggMDtcbn1cblxuLnBvc3RfY29udGVudF91cGxvYWRfY29tbWVudCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAzMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNmY2ZjY7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIG91dGxpbmU6IG5vbmU7XG4gICAgcmVzaXplOiBub25lO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+        </style>
+        <style>
+            .loginForm_container__x1AYH {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 0 auto;
+                max-width: 1263px;
+                margin-top: 100px;
+                padding: 0 5%;
+                height: 100%;
+            }
+
+            .loginForm_img_area__nujwb {
+                width: 380px;
+                margin-right: 5%;
+            }
+
+            .loginForm_img_area__nujwb img {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
+
+            .loginForm_form_area__i3tYR {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                justify-content: center;
+                max-width: 350px;
+                height: 100%;
+            }
+
+            .loginForm_login_form_area__JOQ37 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 100%;
+                padding: 20px 0;
+                background-color: #fff;
+                height: 60%;
+                margin-bottom: 10px;
+            }
+
+            .loginForm_form_logo_area__W0Df- {
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                background-size: cover;
+                margin-bottom: 40px;
+            }
+
+            .loginForm_form_logo__MolPs {
+                width: 80%;
+                height: 100%;
+            }
+
+            .loginForm_form_input_area__YCpW5 {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .loginForm_form_input_box__QxwV2 {
+                width: 80%;
+            }
+
+            .loginForm_form_input_submit__XEkkJ {
+                width: 80%;
+                padding: 10px 15px;
+                margin-top: 30px !important;
+            }
+
+            .loginForm_form_divison_area__L702u {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-grow: row wrap;
+                margin: 20px 0;
+            }
+
+            .loginForm_form_division_text__3FVfM {
+                margin: 0 15px;
+            }
+
+            .loginForm_form_division_line__lyqde {
+                width: 33%;
+            }
+
+            .loginForm_social_login_content__Mtvlq {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 5px 20px;
+                width: 60%;
+                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+
+            .loginForm_social_login_logo__6chaz {
+                width: 15%;
+            }
+
+            .loginForm_social_login_text__7GKhA {
+                width: 80%;
+                text-align: center;
+            }
+
+            .loginForm_form_new_account_area__tmc8u {
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                border-radius: 5px;
+            }
+
+            @media (max-width: 850px) {
+                .loginForm_img_area__nujwb {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 450px) {
+                .loginForm_form_area__i3tYR {
+                    width: 100%;
+                }
+
+                .loginForm_social_login_content__Mtvlq {
+                    width: 70%;
+                    padding: 5px 5px;
+                }
+            }
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvYWNjb3VudC9sb2dpbkZvcm0ubW9kdWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGNBQWM7SUFDZCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGFBQWE7SUFDYixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixnQkFBZ0I7SUFDaEIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsV0FBVztJQUNYLGVBQWU7SUFDZixzQkFBc0I7SUFDdEIsV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQiwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsV0FBVztJQUNYLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIsbUJBQW1CO0lBQ25CLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixpQkFBaUI7SUFDakIsVUFBVTtJQUNWLHVCQUF1QjtJQUN2Qix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLGNBQWM7SUFDZCxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxVQUFVO0lBQ1Ysa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSTtRQUNJLGFBQWE7SUFDakI7QUFDSjs7QUFFQTtJQUNJO1FBQ0ksV0FBVztJQUNmOztJQUVBO1FBQ0ksVUFBVTtRQUNWLGdCQUFnQjtJQUNwQjtBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lcntcbiAgICBkaXNwbGF5OiBmbGV4OyBcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIG1heC13aWR0aDogODAwcHg7XG4gICAgbWFyZ2luLXRvcDogMTAwcHg7XG4gICAgcGFkZGluZzogMCA1JTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5pbWdfYXJlYXtcbiAgICB3aWR0aDogMzgwcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiA1JTtcbn1cblxuLmltZ19hcmVhIGltZ3tcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuLmZvcm1fYXJlYXtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWdyb3c6IDE7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgbWF4LXdpZHRoOiAzNTBweDtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5sb2dpbl9mb3JtX2FyZWF7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogMjBweCAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgaGVpZ2h0OiA2MCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn1cblxuLmZvcm1fbG9nb19hcmVhe1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogODBweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICBtYXJnaW4tYm90dG9tOiA0MHB4O1xufVxuXG4uZm9ybV9sb2dve1xuICAgIHdpZHRoOiA4MCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4uZm9ybV9pbnB1dF9hcmVhe1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuXG4uZm9ybV9pbnB1dF9ib3h7XG4gICAgd2lkdGg6IDgwJTtcbn1cblxuLmZvcm1faW5wdXRfc3VibWl0e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgcGFkZGluZzogMTBweCAxNXB4O1xuICAgIG1hcmdpbi10b3A6IDMwcHggIWltcG9ydGFudDtcbn1cblxuLmZvcm1fZGl2aXNvbl9hcmVhe1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmbGV4LWdyb3c6IHJvdyB3cmFwO1xuICAgIG1hcmdpbjogMjBweCAwO1xufVxuXG4uZm9ybV9kaXZpc2lvbl90ZXh0e1xuICAgIG1hcmdpbjogMCAxNXB4O1xufVxuXG4uZm9ybV9kaXZpc2lvbl9saW5le1xuICAgIHdpZHRoOiAzMyU7XG59XG5cbi5zb2NpYWxfbG9naW5fY29udGVudHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZmxvdzogcm93IHdyYXA7XG4gICAgcGFkZGluZzogNXB4IDIwcHg7XG4gICAgd2lkdGg6IDYwJTtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG5cbi5zb2NpYWxfbG9naW5fbG9nb3tcbiAgICB3aWR0aDogMTUlO1xufVxuXG4uc29jaWFsX2xvZ2luX3RleHR7XG4gICAgd2lkdGg6IDgwJTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5mb3JtX25ld19hY2NvdW50X2FyZWF7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogMjBweCAwO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xufVxuXG5AbWVkaWEobWF4LXdpZHRoOiA4NTBweCl7XG4gICAgLmltZ19hcmVhe1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgIH1cbn1cblxuQG1lZGlhKG1heC13aWR0aDo0NTBweCl7XG4gICAgLmZvcm1fYXJlYXtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxuXG4gICAgLnNvY2lhbF9sb2dpbl9jb250ZW50e1xuICAgICAgICB3aWR0aDogNzAlO1xuICAgICAgICBwYWRkaW5nOiA1cHggNXB4O1xuICAgIH1cbn0iXSwic291cmNlUm9vdCI6IiJ9 */
+        </style>
+        <style>
+            .newAccount_container__3cB\+8 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 0 auto;
+                max-width: 1263px;
+                margin-top: 20px;
+                padding: 0 5%;
+                height: 100%;
+            }
+
+            .newAccount_form_area__yyj9O {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                justify-content: center;
+                max-width: 350px;
+                height: 100%;
+            }
+
+            .newAccount_new_account_form_area__rrvj2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 100%;
+                padding: 20px 0;
+                background-color: #fff;
+                height: 60%;
+                margin-bottom: 10px;
+            }
+
+            .newAccount_form_logo_area__A2tfR {
+                width: 100%;
+                height: 80px;
+                text-align: center;
+                background-size: cover;
+                margin-bottom: 40px;
+            }
+
+            .newAccount_form_logo__OOZUr {
+                width: 80%;
+                height: 100%;
+            }
+
+            .newAccount_form_input_area__L3\+ve {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .newAccount_form_input_box__tO1DQ {
+                width: 80%;
+            }
+
+            .newAccount_form_input_submit__E3aBU {
+                width: 80%;
+                padding: 10px 15px;
+                margin-top: 30px !important;
+            }
+
+            .newAccount_form_divison_area__zEHZg {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-grow: row wrap;
+                margin: 20px 0;
+            }
+
+            .newAccount_form_division_text__588Lu {
+                margin: 0 15px;
+            }
+
+            .newAccount_form_division_line__eC4gG {
+                width: 33%;
+            }
+
+            .newAccount_social_new_account_content__OvV15 {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 5px 20px;
+                width: 60%;
+                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+
+            .newAccount_social_new_account_logo__gpiyz {
+                width: 15%;
+            }
+
+            .newAccount_social_new_account_text__tvR0r {
+                width: 80%;
+                text-align: center;
+            }
+
+            .newAccount_form_new_account_area__siXU7 {
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                border-radius: 5px;
+            }
+
+            @media (max-width: 850px) {
+                .newAccount_img_area__kC3JY {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 450px) {
+                .newAccount_form_area__yyj9O {
+                    width: 100%;
+                }
+
+                .newAccount_social_new_account_content__OvV15 {
+                    width: 70%;
+                    padding: 5px 5px;
+                }
+            }
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvYWNjb3VudC9uZXdBY2NvdW50Lm1vZHVsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixhQUFhO0lBQ2IsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIsZ0JBQWdCO0lBQ2hCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxlQUFlO0lBQ2Ysc0JBQXNCO0lBQ3RCLFdBQVc7SUFDWCxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksVUFBVTtJQUNWLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7SUFDVixrQkFBa0I7SUFDbEIsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0ksYUFBYTtJQUNiLFdBQVc7SUFDWCx1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLG1CQUFtQjtJQUNuQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsaUJBQWlCO0lBQ2pCLFVBQVU7SUFDVix1QkFBdUI7SUFDdkIsdUJBQXVCO0lBQ3ZCLG1CQUFtQjtJQUNuQixjQUFjO0lBQ2QsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixzQkFBc0I7SUFDdEIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0k7UUFDSSxhQUFhO0lBQ2pCO0FBQ0o7O0FBRUE7SUFDSTtRQUNJLFdBQVc7SUFDZjs7SUFFQTtRQUNJLFVBQVU7UUFDVixnQkFBZ0I7SUFDcEI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXJ7XG4gICAgZGlzcGxheTogZmxleDsgXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBtYXgtd2lkdGg6IDgwMHB4O1xuICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgcGFkZGluZzogMCA1JTtcbiAgICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5mb3JtX2FyZWF7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1ncm93OiAxO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIG1heC13aWR0aDogMzUwcHg7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuXG4ubmV3X2FjY291bnRfZm9ybV9hcmVhe1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDIwcHggMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGhlaWdodDogNjAlO1xuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG59XG5cbi5mb3JtX2xvZ29fYXJlYXtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDgwcHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcbn1cblxuLmZvcm1fbG9nb3tcbiAgICB3aWR0aDogODAlO1xuICAgIGhlaWdodDogMTAwJTtcbn1cblxuLmZvcm1faW5wdXRfYXJlYXtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLmZvcm1faW5wdXRfYm94e1xuICAgIHdpZHRoOiA4MCU7XG59XG5cbi5mb3JtX2lucHV0X3N1Ym1pdHtcbiAgICB3aWR0aDogODAlO1xuICAgIHBhZGRpbmc6IDEwcHggMTVweDtcbiAgICBtYXJnaW4tdG9wOiAzMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5mb3JtX2Rpdmlzb25fYXJlYXtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgZmxleC1ncm93OiByb3cgd3JhcDtcbiAgICBtYXJnaW46IDIwcHggMDtcbn1cblxuLmZvcm1fZGl2aXNpb25fdGV4dHtcbiAgICBtYXJnaW46IDAgMTVweDtcbn1cblxuLmZvcm1fZGl2aXNpb25fbGluZXtcbiAgICB3aWR0aDogMzMlO1xufVxuXG4uc29jaWFsX25ld19hY2NvdW50X2NvbnRlbnR7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWZsb3c6IHJvdyB3cmFwO1xuICAgIHBhZGRpbmc6IDVweCAyMHB4O1xuICAgIHdpZHRoOiA2MCU7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xufVxuXG4uc29jaWFsX25ld19hY2NvdW50X2xvZ297XG4gICAgd2lkdGg6IDE1JTtcbn1cblxuLnNvY2lhbF9uZXdfYWNjb3VudF90ZXh0e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uZm9ybV9uZXdfYWNjb3VudF9hcmVhe1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDIwcHggMDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbn1cblxuQG1lZGlhKG1heC13aWR0aDogODUwcHgpe1xuICAgIC5pbWdfYXJlYXtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG59XG5cbkBtZWRpYShtYXgtd2lkdGg6NDUwcHgpe1xuICAgIC5mb3JtX2FyZWF7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cblxuICAgIC5zb2NpYWxfbmV3X2FjY291bnRfY29udGVudHtcbiAgICAgICAgd2lkdGg6IDcwJTtcbiAgICAgICAgcGFkZGluZzogNXB4IDVweDtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
+        </style>
+        <style>
+            .header_container__O3pa7 {
+                box-sizing: border-box;
+            }
+
+            .header_mobile_top__INTe8 {
+                width: 100%;
+                display: none;
+            }
+
+            .header_mobile_bottom__NBa95 {
+                display: none;
+            }
+
+            .header_menu_content_container__XdasQ {
+                position: fixed;
+                height: 100%;
+                top: 0;
+                left: 0%;
+                border-right: 1px solid #ddd;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+
+            .header_menu_content_logo__nBLKc {
+                padding: 30px 12px;
+            }
+
+            .header_menu_content_logo__nBLKc a {
+                color: black;
+            }
+
+            .header_menu_content__WO2FJ {
+                padding: 12px;
+            }
+
+            .header_menu_content__WO2FJ a {
+                color: black;
+            }
+
+            .header_menu_content_more__iJuGw {
+                margin-top: auto;
+                color: black;
+            }
+
+            @media (max-width: 768px) {
+                .header_menu_content_container__XdasQ {
+                    display: none;
+                }
+
+                .header_mobile_top__INTe8 {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    min-width: 320px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    border-bottom: 1px solid #ddd;
+                    background-color: #f6f6f6;
+                    z-index: 100;
+                }
+
+                .header_mobile_bottom__NBa95 {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    min-width: 320px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    background-color: #f6f6f6;
+                    z-index: 100;
+                    justify-content: space-between;
+                    border-top: 1px solid #ddd;
+                }
+
+                .header_menu_alarm__HwVqy {
+                    margin-left: auto;
+                    padding: 0 12px;
+                }
+
+                .header_mobile_menu_content__DTDae {
+                    padding: 12px 0;
+                    width: 20%;
+                    justify-content: center;
+                    display: flex;
+                }
+
+                .header_mobile_menu_content__DTDae a {
+                    color: black;
+                }
+            }
+
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvbGF5b3V0L2hlYWRlci5tb2R1bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLFlBQVk7SUFDWixNQUFNO0lBQ04sUUFBUTtJQUNSLDRCQUE0QjtJQUM1QixhQUFhO0lBQ2Isd0JBQXdCO0FBQzVCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSTtRQUNJLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxlQUFlO1FBQ2YsTUFBTTtRQUNOLE9BQU87UUFDUCxXQUFXO1FBQ1gsZ0JBQWdCO1FBQ2hCLGFBQWE7UUFDYixtQkFBbUI7UUFDbkIsbUJBQW1CO1FBQ25CLDZCQUE2QjtRQUM3Qix5QkFBeUI7UUFDekIsWUFBWTtJQUNoQjs7SUFFQTtRQUNJLGVBQWU7UUFDZixTQUFTO1FBQ1QsT0FBTztRQUNQLFdBQVc7UUFDWCxnQkFBZ0I7UUFDaEIsYUFBYTtRQUNiLG1CQUFtQjtRQUNuQix5QkFBeUI7UUFDekIsWUFBWTtRQUNaLDhCQUE4QjtRQUM5QiwwQkFBMEI7SUFDOUI7O0lBRUE7UUFDSSxpQkFBaUI7UUFDakIsZUFBZTtJQUNuQjs7SUFFQTtRQUNJLGVBQWU7UUFDZixVQUFVO1FBQ1YsdUJBQXVCO1FBQ3ZCLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxZQUFZO0lBQ2hCO0FBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuXG4ubW9iaWxlX3RvcCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogbm9uZTtcbn1cblxuLm1vYmlsZV9ib3R0b20ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5tZW51X2NvbnRlbnRfY29udGFpbmVyIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwJTtcbiAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjZGRkO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1mbG93OiBjb2x1bW4gbm93cmFwO1xufVxuXG4ubWVudV9jb250ZW50X2xvZ28ge1xuICAgIHBhZGRpbmc6IDMwcHggMTJweDtcbn1cblxuLm1lbnVfY29udGVudF9sb2dvIGEge1xuICAgIGNvbG9yOiBibGFjaztcbn1cblxuLm1lbnVfY29udGVudCB7XG4gICAgcGFkZGluZzogMTJweDtcbn1cblxuLm1lbnVfY29udGVudCBhIHtcbiAgICBjb2xvcjogYmxhY2s7XG59XG5cbi5tZW51X2NvbnRlbnRfbW9yZSB7XG4gICAgbWFyZ2luLXRvcDogYXV0bztcbiAgICBjb2xvcjogYmxhY2s7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA2MjBweCkge1xuICAgIC5tZW51X2NvbnRlbnRfY29udGFpbmVyIHtcbiAgICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG5cbiAgICAubW9iaWxlX3RvcCB7XG4gICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWluLXdpZHRoOiAzMjBweDtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkZGQ7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNmY2ZjY7XG4gICAgICAgIHotaW5kZXg6IDEwMDtcbiAgICB9XG5cbiAgICAubW9iaWxlX2JvdHRvbSB7XG4gICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWluLXdpZHRoOiAzMjBweDtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiByb3cgd3JhcDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjZmNjtcbiAgICAgICAgei1pbmRleDogMTAwO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZGRkO1xuICAgIH1cblxuICAgIC5tZW51X2FsYXJtIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICB9XG5cbiAgICAubW9iaWxlX21lbnVfY29udGVudCB7XG4gICAgICAgIHBhZGRpbmc6IDEycHggMDtcbiAgICAgICAgd2lkdGg6IDIwJTtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgfVxuXG4gICAgLm1vYmlsZV9tZW51X2NvbnRlbnQgYSB7XG4gICAgICAgIGNvbG9yOiBibGFjaztcbiAgICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
+        </style>
+        <style>
+            .footer_container__WhDqi {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                width: 100%;
+                margin-top: 0 auto;
+                padding: 50px 0;
+            }
+
+            .footer_text_area__JRcoR {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                max-width: 1440px;
+            }
+
+            .footer_text_box__BwBIb {
+                padding: 10px;
+            }
+
+            .footer_text_value__c1hsl {
+                font-size: 10px;
+            }
+
+            /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvbGF5b3V0L2Zvb3Rlci5tb2R1bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGtCQUFrQjtJQUNsQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkIiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZmxvdzogY29sdW1uIHdyYXA7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tdG9wOiAwIGF1dG87XG4gICAgcGFkZGluZzogNTBweCAwO1xufVxuXG4udGV4dF9hcmVhIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZmxvdzogcm93IHdyYXA7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBtYXgtd2lkdGg6IDE0NDBweDtcbn1cblxuLnRleHRfYm94IHtcbiAgICBwYWRkaW5nOiAxMHB4O1xufVxuXG4udGV4dF92YWx1ZSB7XG4gICAgZm9udC1zaXplOiAxMHB4O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-tzssek-MuiSvgIcon-root {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-size: 2.1875rem;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-dpq74k-MuiPopover-root {
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-1wlk0hk-MuiAvatar-root {
+                position: relative;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-size: 1.25rem;
+                line-height: 1;
+                border-radius: 50%;
+                overflow: hidden;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-1pqm26d-MuiAvatar-img {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                object-fit: cover;
+                color: transparent;
+                text-indent: 10000px;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-2s90m6-MuiAvatar-root {
+                position: relative;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-size: 1.25rem;
+                line-height: 1;
+                border-radius: 50%;
+                overflow: hidden;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #fff;
+                background-color: #bdbdbd;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-1i6ghfn-MuiAvatar-fallback {
+                width: 75%;
+                height: 75%;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-size: 1.5rem;
+                width: 75%;
+                height: 75%;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-i4bv87-MuiSvgIcon-root {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-size: 1.5rem;
+            }
+        </style>
+        <style data-emotion="css" data-s="">
+            .css-ptiqhd-MuiSvgIcon-root {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                fill: currentColor;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-size: 1.25rem;
+            }
+        </style>
+        <style data-styled="active" data-styled-version="5.3.6">
+            body{width:100%;background:#000 color:#fff;}
+        </style>
+        <script src="./React App_files/js" async=""></script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div class="App">
+                <div class="header_container__O3pa7">
+                    <div class="header_mobile_top__INTe8">
+                        <div class="header_mobile_menu_content__DTDae">
+                            <a href="http://localhost:3000/"
+                                ><svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="HomeIcon"
+                                >
+                                    <path
+                                        d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                                    ></path></svg
+                            ></a>
+                        </div>
+                        <div class="header_menu_alarm__HwVqy">
+                            <svg
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                focusable="false"
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                data-testid="NotificationsNoneIcon"
+                            >
+                                <path
+                                    d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="header_menu_content_container__XdasQ">
+                        <div class="header_menu_content_logo__nBLKc">
+                            <a href="http://localhost:3000/"
+                                ><svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="HomeIcon"
+                                >
+                                    <path
+                                        d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                                    ></path></svg
+                            ></a>
+                        </div>
+                        <div>
+                            <div class="header_menu_content__WO2FJ">
+                                <a href="http://localhost:3000/"
+                                    ><svg
+                                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                        focusable="false"
+                                        aria-hidden="true"
+                                        viewBox="0 0 24 24"
+                                        data-testid="HomeIcon"
+                                    >
+                                        <path
+                                            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                                        ></path></svg
+                                ></a>
+                            </div>
+                            <div class="header_menu_content__WO2FJ">
+                                <svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="SearchIcon"
+                                >
+                                    <path
+                                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="header_menu_content__WO2FJ">
+                                <svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="AddBoxIcon"
+                                >
+                                    <path
+                                        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="header_menu_content__WO2FJ">
+                                <svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="NotificationsNoneIcon"
+                                >
+                                    <path
+                                        d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="header_menu_content__WO2FJ">
+                                <a href="http://localhost:3000/profile/Y_U_5_ME"
+                                    ><div
+                                        class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                    >
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="PersonIcon"
+                                        >
+                                            <path
+                                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                            ></path>
+                                        </svg></div
+                                ></a>
+                            </div>
+                        </div>
+                        <div
+                            class="header_menu_content__WO2FJ header_menu_content_more__iJuGw"
+                        >
+                            <svg
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                focusable="false"
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                data-testid="ReorderIcon"
+                            >
+                                <path
+                                    d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="header_mobile_bottom__NBa95">
+                        <div class="header_mobile_menu_content__DTDae">
+                            <a href="http://localhost:3000/"
+                                ><svg
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    viewBox="0 0 24 24"
+                                    data-testid="HomeIcon"
+                                >
+                                    <path
+                                        d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                                    ></path></svg
+                            ></a>
+                        </div>
+                        <div class="header_mobile_menu_content__DTDae">
+                            <svg
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                focusable="false"
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                data-testid="SearchIcon"
+                            >
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="header_mobile_menu_content__DTDae">
+                            <svg
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+                                focusable="false"
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                data-testid="AddBoxIcon"
+                            >
+                                <path
+                                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="header_mobile_menu_content__DTDae">
+                            <a href="http://localhost:3000/profile/Y_U_5_ME"
+                                ><div
+                                    class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                >
+                                    <svg
+                                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                        focusable="false"
+                                        aria-hidden="true"
+                                        viewBox="0 0 24 24"
+                                        data-testid="PersonIcon"
+                                    >
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                        ></path>
+                                    </svg></div
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <div class="mainPost_container__vD2Rq">
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>0개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>1개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>2개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>3개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>4개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>5개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>6개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>7개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>8개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainPost_post_container__f4Thr">
+                            <div class="mainPost_post_area__JoiUu">
+                                <div class="mainPost_post_profile_area__Ealor">
+                                    <div
+                                        class="mainPost_post_profile_img_area__TWZWn"
+                                    >
+                                        <div
+                                            class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="PersonIcon"
+                                            >
+                                                <path
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mainPost_post_profile_text_area__ab4vd"
+                                    >
+                                        <div>asdda11d</div>
+                                        <div
+                                            class="mainPost_post_upload_date__F45PS"
+                                        >
+                                            <span
+                                                class="mainPost_post_id_date_division__W-JJm"
+                                                >•</span
+                                            >1일전
+                                        </div>
+                                    </div>
+                                    <div class="mainPost_post_more_area__zuNWQ">
+                                        <svg
+                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                            focusable="false"
+                                            aria-hidden="true"
+                                            viewBox="0 0 24 24"
+                                            data-testid="MoreHorizIcon"
+                                        >
+                                            <path
+                                                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mainPost_post_img_area__K+Gnc">
+                                    <img
+                                        src="./React App_files/tes.jpeg"
+                                        class="mainPost_post_img__2kjzD"
+                                    />
+                                </div>
+                                <div class="mainPost_post_content_area__yXp2x">
+                                    <div
+                                        class="mainPost_post_content_reaction_area__XlFR-"
+                                    >
+                                        <div
+                                            class="mainPost_post_reaction_like_area__dywBs"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="FavoriteBorderIcon"
+                                            >
+                                                <path
+                                                    d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="ChatBubbleOutlineIcon"
+                                            >
+                                                <path
+                                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_reaction_interest_area__BJf-w"
+                                        >
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="BookmarkBorderIcon"
+                                            >
+                                                <path
+                                                    d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15-5-2.18L7 18V5h10v13z"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="mainPost_post_reaction_like_text_area__5vThC"
+                                        >
+                                            좋아요<span>9개</span>
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_comment__WgGy7"
+                                        >
+                                            MYDL입니다.
+                                        </div>
+                                        <div
+                                            class="mainPost_post_conetnt_total_comment__IC9o1"
+                                        >
+                                            댓글 1452개 모두 보기
+                                        </div>
+                                        <div
+                                            class="mainPost_post_content_upload_comment_area__v2S71"
+                                        >
+                                            <textarea
+                                                placeholder="댓글 달기..."
+                                                class="mainPost_post_content_upload_comment__Uv07b"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="footer_container__WhDqi">
+                    <div class="footer_text_area__JRcoR">
+                        <div class="footer_text_box__BwBIb">
+                            <h6 class="footer_text_value__c1hsl">김영훈</h6>
+                        </div>
+                        <div class="footer_text_box__BwBIb">
+                            <h6 class="footer_text_value__c1hsl">깃허브</h6>
+                        </div>
+                        <div class="footer_text_box__BwBIb">
+                            <h6 class="footer_text_value__c1hsl">블로그</h6>
+                        </div>
+                        <div class="footer_text_box__BwBIb">
+                            <h6 class="footer_text_value__c1hsl">이메일</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div><h6>CreateAt - 2023 V0,1</h6></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    --></body>
+</html>
