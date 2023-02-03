@@ -93,6 +93,12 @@
         padding: 12px 0;
         width: 20%;
         justify-content: center;
+        align-items: center;
         display: flex;
+    }
+
+    .mobile_menu_content div {
+        max-width: 30px;
+        height: 30px;
     }
 }

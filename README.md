@@ -2,7 +2,7 @@
 
 개인 사이드 프로젝트 SNS페이지 입니다.
 
-1. 버전: V0.2
+1. 버전: V0.3
 
 2. 기술 스택
 
@@ -15,4 +15,5 @@
 3. 버전별 이력
 
 -   V0.1: React설치, React Route 설정
--   v0.2: Web Page기본틀 제작, Redux설치
+-   V0.2: Web Page기본틀 제작, Redux설치
+-   V0.3: Web Page(login, newAccount, main, profile)화면 구현 완료

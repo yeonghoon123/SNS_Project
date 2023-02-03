@@ -9,7 +9,6 @@ import MainPage from "../routes/Main";
 import ProfilePage from "../routes/Profile";
 import LoginPage from "../routes/Login";
 import NewAccountPage from "../routes/NewAccount";
-import Header from "./layout/Header";
 
 const AppRouter = ({ props }) => {
     const { loginStatus } = props;
@@ -21,6 +20,10 @@ const AppRouter = ({ props }) => {
                     <Route exact path="/" element={<MainPage />} />
                     <Route
                         path="/profile/:profileId"
+                        element={<ProfilePage />}
+                    />
+                    <Route
+                        path="/profile/:profileId/:postKind"
                         element={<ProfilePage />}
                     />
                     <Route path="*" element={<Navigate to="/" replace />} />

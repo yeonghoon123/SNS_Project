@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import style from "../css/main/mainPost.module.css";
 import MainPost from "../components/main/MainPost";
 

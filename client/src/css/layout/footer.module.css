@@ -21,3 +21,9 @@
 .text_value {
     font-size: 10px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+}

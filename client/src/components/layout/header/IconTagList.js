@@ -2,25 +2,25 @@ import React, { useState } from "react";
 import { Home, Search, Reorder } from "@mui/icons-material";
 import { Popover, Typography } from "@mui/material";
 
-export const SearchIcon = () => {
+export const SearchIcon = ({ fontSize }) => {
     return (
         <>
-            <Search fontSize="large" />
+            <Search fontSize={fontSize} />
         </>
     );
 };
 
-export const HomeIcon = () => {
+export const HomeIcon = ({ fontSize }) => {
     return (
         <>
             <a href={"/"}>
-                <Home fontSize="large" />
+                <Home fontSize={fontSize} />
             </a>
         </>
     );
 };
 
-export const ReorderIcon = () => {
+export const ReorderIcon = ({ fontSize }) => {
     const [anchorEl, setAnchorEl] = useState(null); // popOver할 대상 변수
 
     /** 이벤트가 실행되면 Popover띄우는 함수, Input: event */
@@ -37,7 +37,7 @@ export const ReorderIcon = () => {
     const id = open ? "simple-popover" : undefined; // Popover에 적용되는 대싱에 id
     return (
         <>
-            <Reorder fontSize="large" onClick={handleClick} />
+            <Reorder fontSize={fontSize} onClick={handleClick} />
             <Popover
                 id={id}
                 open={open}

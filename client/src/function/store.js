@@ -5,7 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension"; // 리덕스 개
 export const screenModeSlice = createSlice({
     name: "screenMode",
     initialState: {
-        themeMode: "light",
+        themeMode: "dark",
     },
     reducers: {
         darkMode: (state) => {

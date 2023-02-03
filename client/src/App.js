@@ -10,12 +10,20 @@ function App() {
     const [loginStatus, setLoginStatus] = useState(true);
     return (
         <div className="App">
-            <ThemeProvider>
-                <GlobalStyle />
-                {loginStatus && <Header />}
-                <AppRouter props={{ loginStatus }} />
-                <Footer />
-            </ThemeProvider>
+            {loginStatus ? (
+                <ThemeProvider>
+                    <GlobalStyle />
+                    {loginStatus && <Header />}
+                    <AppRouter props={{ loginStatus }} />
+                    <Footer />
+                </ThemeProvider>
+            ) : (
+                <>
+                    {" "}
+                    <AppRouter props={{ loginStatus }} />
+                    <Footer />
+                </>
+            )}
         </div>
     );
 }

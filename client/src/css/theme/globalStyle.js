@@ -25,4 +25,30 @@ export const GlobalStyle = createGlobalStyle`
 	.navbar_text{
 		color: ${({ theme }) => theme.navbarColor};
 	}
+
+	.select_navbar{
+		border-top: ${({ theme }) => theme.navbarBorder};
+	}
+
+	section {
+		margin-left: 64px;
+		max-width: calc(100% - 64px);
+
+	}
+
+
+@media (min-width: 1263px) {
+    section {
+        margin-left: 135px;
+        max-width: calc(100% - 135px);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-left: 0px;
+        max-width: 100%;
+        margin: 64px 0;
+    }
+}
 `;
