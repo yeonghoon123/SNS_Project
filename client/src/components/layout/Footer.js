@@ -20,7 +20,7 @@ const Footer = () => {
             <div className={style.create_year_area}>
                 <div className={style.create_year_box}>
                     <h6 className={style.create_year_value}>
-                        CreateAt - 2023 V0.1
+                        CreateAt - 2023 V0.3
                     </h6>
                 </div>
             </div>
