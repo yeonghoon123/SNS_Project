@@ -1,10 +1,18 @@
 import React from "react";
 import style from "../../css/account/newAccount.module.css";
+import { useForm } from "react-hook-form";
 import { TextField, Button } from "@mui/material";
 import { GitHub, Google } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const NewAccount = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+    const onSubmit = (data) => console.log(data);
+
     return (
         <div className={style.container}>
             <div className={style.form_area}>
@@ -16,7 +24,7 @@ const NewAccount = () => {
                         />
                     </div>
                     <div className={style.login_form}>
-                        <form>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <div className={style.form_input_area}>
                                 <TextField
                                     type="text"
@@ -24,6 +32,7 @@ const NewAccount = () => {
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
+                                    {...register("userId", { required: true })}
                                 />
                                 <TextField
                                     type="text"
@@ -31,6 +40,9 @@ const NewAccount = () => {
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
+                                    {...register("userName", {
+                                        required: true,
+                                    })}
                                 />
                                 <TextField
                                     type="text"
@@ -38,6 +50,9 @@ const NewAccount = () => {
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
+                                    {...register("userNickname", {
+                                        required: true,
+                                    })}
                                 />
                                 <TextField
                                     type="password"
@@ -45,7 +60,18 @@ const NewAccount = () => {
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
+                                    {...register("userPw", {
+                                        required: {
+                                            value: true,
+                                            message: "required",
+                                        },
+                                    })}
                                 />
+                                {errors.userPw && (
+                                    <span role="alert">
+                                        This field is required
+                                    </span>
+                                )}
                                 <Button
                                     variant="contained"
                                     disabled={false}

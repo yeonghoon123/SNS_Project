@@ -7,7 +7,7 @@ import { ThemeProvider } from "./function/themeProvider";
 import { GlobalStyle } from "./css/theme/globalStyle";
 
 function App() {
-    const [loginStatus, setLoginStatus] = useState(true);
+    const [loginStatus, setLoginStatus] = useState(false);
     return (
         <div className="App">
             {loginStatus ? (
