@@ -19,10 +19,18 @@
     border-right: 1px solid #2e2e2e;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
 }
 
 .menu_content_logo {
+    text-align: center;
     padding: 30px 12px;
+}
+
+.menu_content_area {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .menu_content {

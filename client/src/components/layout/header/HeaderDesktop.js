@@ -13,7 +13,7 @@ const HeaderDesktop = () => {
                 </div>
                 <div className={style.menu_content_area}>
                     <div className={style.menu_content}>
-                        <HomeIcon />
+                        <HomeIcon fontSize={"large"} />
                         <span>홈</span>
                     </div>
                     <div className={style.menu_content}>
@@ -38,7 +38,7 @@ const HeaderDesktop = () => {
                 <div
                     className={`${style.menu_content} ${style.menu_content_more}`}
                 >
-                    <ReorderIcon fontSize={"small"} />
+                    <ReorderIcon fontSize={"large"} />
                     <span>더보기</span>
                 </div>
             </div>
