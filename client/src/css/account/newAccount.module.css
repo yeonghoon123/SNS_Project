@@ -1,5 +1,5 @@
-.container{
-    display: flex; 
+.container {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
@@ -9,7 +9,7 @@
     height: 100%;
 }
 
-.form_area{
+.form_area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
     height: 100%;
 }
 
-.new_account_form_area{
+.new_account_form_area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
     margin-bottom: 10px;
 }
 
-.form_logo_area{
+.form_logo_area {
     width: 100%;
     height: 80px;
     text-align: center;
@@ -40,28 +40,32 @@
     margin-bottom: 40px;
 }
 
-.form_logo{
+.form_logo {
     width: 80%;
     height: 100%;
 }
 
-.form_input_area{
+.new_account_input_container {
+    width: 100%;
+}
+
+.form_input_area {
     text-align: center;
     width: 100%;
     margin-bottom: 15px;
 }
 
-.form_input_box{
+.form_input_box {
     width: 80%;
 }
 
-.form_input_submit{
+.form_input_submit {
     width: 80%;
     padding: 10px 15px;
     margin-top: 30px !important;
 }
 
-.form_divison_area{
+.form_divison_area {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -70,15 +74,15 @@
     margin: 20px 0;
 }
 
-.form_division_text{
+.form_division_text {
     margin: 0 15px;
 }
 
-.form_division_line{
+.form_division_line {
     width: 33%;
 }
 
-.social_new_account_content{
+.social_new_account_content {
     display: flex;
     flex-flow: row wrap;
     padding: 5px 20px;
@@ -90,16 +94,16 @@
     margin-bottom: 15px;
 }
 
-.social_new_account_logo{
+.social_new_account_logo {
     width: 15%;
 }
 
-.social_new_account_text{
+.social_new_account_text {
     width: 80%;
     text-align: center;
 }
 
-.form_new_account_area{
+.form_new_account_area {
     width: 100%;
     padding: 20px 0;
     text-align: center;
@@ -108,18 +112,27 @@
     border-radius: 5px;
 }
 
-@media(max-width: 850px){
-    .img_area{
+.form_error_message {
+    width: 80%;
+    display: block;
+    font-size: 12px;
+    margin: 0 auto;
+    color: red;
+    text-align: left;
+}
+
+@media (max-width: 850px) {
+    .img_area {
         display: none;
     }
 }
 
-@media(max-width:450px){
-    .form_area{
+@media (max-width: 450px) {
+    .form_area {
         width: 100%;
     }
 
-    .social_new_account_content{
+    .social_new_account_content {
         width: 70%;
         padding: 5px 5px;
     }

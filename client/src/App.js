@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { ThemeProvider } from "./function/themeProvider";
 import { GlobalStyle } from "./css/theme/globalStyle";
+import { useSelector } from "react-redux";
 
 function App() {
     const [loginStatus, setLoginStatus] = useState(false);
@@ -13,13 +14,12 @@ function App() {
             {loginStatus ? (
                 <ThemeProvider>
                     <GlobalStyle />
-                    {loginStatus && <Header />}
+                    <Header />
                     <AppRouter props={{ loginStatus }} />
                     <Footer />
                 </ThemeProvider>
             ) : (
                 <>
-                    {" "}
                     <AppRouter props={{ loginStatus }} />
                     <Footer />
                 </>

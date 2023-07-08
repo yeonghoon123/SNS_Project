@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { TextField, Button } from "@mui/material";
 import { GitHub, Google } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NewAccount = () => {
     const {
@@ -11,7 +12,27 @@ const NewAccount = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+
+    const firebaseMethod = useSelector((store) => store.firebaseMethod);
+
+    const onSubmit = async (userAccount) => {
+        const response = await firebaseMethod.authService
+            .createUserWithEmailAndPassword(
+                userAccount.userEmail,
+                userAccount.userPw
+            )
+            .catch((err) => {
+                console.log(err.code);
+            });
+
+        console.log(response);
+    };
+
+    const socialAccount = (event) => {
+        const {
+            target: { name },
+        } = event;
+    };
 
     return (
         <div className={style.container}>
@@ -23,17 +44,27 @@ const NewAccount = () => {
                             src={"img/login/loginBG.jpg"}
                         />
                     </div>
-                    <div className={style.login_form}>
+                    <div className={style.new_account_input_container}>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className={style.form_input_area}>
                                 <TextField
                                     type="text"
-                                    placeholder="사용자 이메일 또는 아이디"
+                                    placeholder="사용자 이메일"
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
-                                    {...register("userId", { required: true })}
+                                    {...register("userEmail", {
+                                        required: {
+                                            value: true,
+                                            message: "required field",
+                                        },
+                                    })}
                                 />
+                                {errors.userEmail && (
+                                    <span className={style.form_error_message}>
+                                        {errors.userId.message}
+                                    </span>
+                                )}
                                 <TextField
                                     type="text"
                                     placeholder="성명"
@@ -44,6 +75,13 @@ const NewAccount = () => {
                                         required: true,
                                     })}
                                 />
+
+                                {errors.userName && (
+                                    <span className={style.form_error_message}>
+                                        This field is required
+                                    </span>
+                                )}
+
                                 <TextField
                                     type="text"
                                     placeholder="사용자 이름"
@@ -54,6 +92,13 @@ const NewAccount = () => {
                                         required: true,
                                     })}
                                 />
+
+                                {errors.userNickname && (
+                                    <span className={style.form_error_message}>
+                                        This field is required
+                                    </span>
+                                )}
+
                                 <TextField
                                     type="password"
                                     placeholder="비밀번호"
@@ -67,11 +112,13 @@ const NewAccount = () => {
                                         },
                                     })}
                                 />
+
                                 {errors.userPw && (
-                                    <span role="alert">
+                                    <span className={style.form_error_message}>
                                         This field is required
                                     </span>
                                 )}
+
                                 <Button
                                     variant="contained"
                                     disabled={false}
@@ -92,7 +139,11 @@ const NewAccount = () => {
                             </div>
                         </div>
                         <div className={style.social_new_account_form}>
-                            <div className={style.social_new_account_content}>
+                            <div
+                                className={style.social_new_account_content}
+                                name="github"
+                                onClick={(event) => socialAccount(event)}
+                            >
                                 <div className={style.social_new_account_logo}>
                                     <GitHub />
                                 </div>
@@ -100,7 +151,11 @@ const NewAccount = () => {
                                     GitHub로 회원 가입
                                 </div>
                             </div>
-                            <div className={style.social_new_account_content}>
+                            <div
+                                className={style.social_new_account_content}
+                                name="google"
+                                onClick={(event) => socialAccount(event)}
+                            >
                                 <div className={style.social_new_account_logo}>
                                     <Google />
                                 </div>

@@ -6,7 +6,6 @@ import { ThemeProvider as StyledProvider } from "styled-components";
 
 const ThemeProvider = ({ children }) => {
     const themeMode = useSelector((store) => store.screenMode.themeMode);
-
     const themeObject = themeMode === "light" ? lightTheme : darkTheme;
 
     return <StyledProvider theme={themeObject}>{children}</StyledProvider>;
