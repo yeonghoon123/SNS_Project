@@ -14,16 +14,13 @@ const screenModeSlice = createSlice({
         themeMode: "dark",
     },
     reducers: {
-        darkMode: (state) => {
-            state.themeMode = "dark";
-        },
-        lightMode: (state) => {
-            state.themeMode = "light";
+        changeTheme: (state) => {
+            state.themeMode = state.themeMode === "dark" ? "light" : "dark";
         },
     },
 });
 
-const firebaseMethod = createSlice({
+const firebaseMethodSlice = createSlice({
     name: "firebaseMethod",
     initialState: {
         authService: authService,
@@ -33,15 +30,41 @@ const firebaseMethod = createSlice({
     },
 });
 
-// Action creators are generated for each case reducer function
-export const { darkMode, lightMode } = screenModeSlice.actions;
-
-const store = configureStore({
-    reducer: {
-        screenMode: screenModeSlice.reducer,
-        firebaseMethod: firebaseMethod.reducer,
+const userAccountSlice = createSlice({
+    name: "userAccount",
+    initialState: {
+        isLogged: false,
+        account_info: {},
     },
-    composeWithDevTools,
+    reducers: {
+        loginAccount: (state, action) => {
+            state.isLogged = true;
+            state.account_info = action.payload.getUserData;
+        },
+        logoutAccount: (state) => {
+            state.isLogged = false;
+            state.account_info = {};
+        },
+    },
 });
+
+// Action creators are generated for each case reducer function
+export const { changeTheme } = screenModeSlice.actions;
+export const { loginAccount, logoutAccount } = userAccountSlice.actions;
+
+const store = configureStore(
+    {
+        reducer: {
+            screenMode: screenModeSlice.reducer,
+            firebaseMethod: firebaseMethodSlice.reducer,
+            userAccount: userAccountSlice.reducer,
+        },
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware({
+                serializableCheck: false,
+            }),
+    },
+    composeWithDevTools()
+);
 
 export default store;

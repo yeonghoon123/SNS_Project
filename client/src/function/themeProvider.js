@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { lightTheme, darkTheme } from "../css/theme/theme";
 import { useDispatch, useSelector } from "react-redux";
-import { darkMode, lightMode } from "./store";
+import { changeTheme } from "./store";
 import { ThemeProvider as StyledProvider } from "styled-components";
 
 const ThemeProvider = ({ children }) => {
@@ -16,11 +16,7 @@ function useTheme() {
     const dispatch = useDispatch();
 
     const toggleTheme = useCallback(() => {
-        if (themeMode === "light") {
-            dispatch(darkMode());
-        } else {
-            dispatch(lightMode());
-        }
+        dispatch(changeTheme());
     }, [themeMode]);
 
     return [themeMode, toggleTheme];

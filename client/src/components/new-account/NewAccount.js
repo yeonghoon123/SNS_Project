@@ -1,37 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../../css/account/newAccount.module.css";
 import { useForm } from "react-hook-form";
-import { TextField, Button } from "@mui/material";
-import { GitHub, Google } from "@mui/icons-material";
+import { TextField, Button, CircularProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Swal from "sweetalert2";
+import { errMessage } from "../../function/errorMessage";
+import { getDateTime } from "../../function/getDateTime";
 
 const NewAccount = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
 
-    const firebaseMethod = useSelector((store) => store.firebaseMethod);
+    const firebaseMethod = useSelector((store) => store.firebaseMethod); // Redux store에 저장된 firebase 가져오기
 
+    // 회원가입 입력 조건이 충족하면 firebase기능들을 실행
     const onSubmit = async (userAccount) => {
-        const response = await firebaseMethod.authService
+        setIsLoading(true);
+
+        // firebase auth에 계정추가
+        const createResponse = await firebaseMethod.authService
             .createUserWithEmailAndPassword(
                 userAccount.userEmail,
                 userAccount.userPw
             )
             .catch((err) => {
-                console.log(err.code);
+                errMessage(err.message);
             });
 
-        console.log(response);
-    };
+        if (createResponse) {
+            const userInfo = createResponse.user; // 추가한 사용자 정보
+            const nowDateTime = getDateTime(); //현재 시간 가져오기
 
-    const socialAccount = (event) => {
-        const {
-            target: { name },
-        } = event;
+            // 사용자 이메일로 인증 메일 전송
+            await userInfo
+                .sendEmailVerification()
+                .catch((err) => errMessage(err.message));
+
+            // firestore에 저장할 사용자 정보
+            const userAccountObj = {
+                user_create_date: nowDateTime,
+                user_email: userAccount.userEmail,
+                user_last_login: "",
+                user_name: userAccount.userName,
+                user_nickname: userAccount.userNickname,
+                user_profile: "",
+                user_uid: userInfo.uid,
+                user_status: 1,
+            };
+
+            // firebase db에 저장
+            await firebaseMethod.dbService
+                .collection("user_account")
+                .add(userAccountObj)
+                .catch((err) => errMessage(err.message));
+
+            const SwalResponse = await Swal.fire({
+                text: "Congratulations on your subscription.\n We will send you a verification email. Available after authentication",
+                icon: "success",
+            });
+
+            if (SwalResponse.isConfirmed) {
+                return (document.location.href = "/login");
+            }
+        }
     };
 
     return (
@@ -54,15 +91,16 @@ const NewAccount = () => {
                                     margin="dense"
                                     className={style.form_input_box}
                                     {...register("userEmail", {
-                                        required: {
-                                            value: true,
-                                            message: "required field",
+                                        required: "required field",
+                                        pattern: {
+                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i,
+                                            message: "Please format your email",
                                         },
                                     })}
                                 />
                                 {errors.userEmail && (
                                     <span className={style.form_error_message}>
-                                        {errors.userId.message}
+                                        {errors.userEmail.message}
                                     </span>
                                 )}
                                 <TextField
@@ -84,18 +122,23 @@ const NewAccount = () => {
 
                                 <TextField
                                     type="text"
-                                    placeholder="사용자 이름"
+                                    placeholder="사용자 별명"
                                     size="small"
                                     margin="dense"
                                     className={style.form_input_box}
                                     {...register("userNickname", {
-                                        required: true,
+                                        required: "This field is required",
+                                        pattern: {
+                                            value: /^[a-zA-Z0-9]*$/,
+                                            message:
+                                                "Only English and numbers can be entered",
+                                        },
                                     })}
                                 />
 
                                 {errors.userNickname && (
                                     <span className={style.form_error_message}>
-                                        This field is required
+                                        {errors.userNickname.message}
                                     </span>
                                 )}
 
@@ -125,45 +168,17 @@ const NewAccount = () => {
                                     type="submit"
                                     className={style.form_input_submit}
                                 >
-                                    가입
+                                    {isLoading ? (
+                                        <CircularProgress
+                                            color="inherit"
+                                            size={20}
+                                        />
+                                    ) : (
+                                        "가입"
+                                    )}
                                 </Button>
                             </div>
                         </form>
-                        <div className={style.form_divison_area}>
-                            <div className={style.form_division_line}>
-                                <hr />
-                            </div>
-                            <div className={style.form_division_text}>또는</div>
-                            <div className={style.form_division_line}>
-                                <hr />
-                            </div>
-                        </div>
-                        <div className={style.social_new_account_form}>
-                            <div
-                                className={style.social_new_account_content}
-                                name="github"
-                                onClick={(event) => socialAccount(event)}
-                            >
-                                <div className={style.social_new_account_logo}>
-                                    <GitHub />
-                                </div>
-                                <div className={style.social_new_account_text}>
-                                    GitHub로 회원 가입
-                                </div>
-                            </div>
-                            <div
-                                className={style.social_new_account_content}
-                                name="google"
-                                onClick={(event) => socialAccount(event)}
-                            >
-                                <div className={style.social_new_account_logo}>
-                                    <Google />
-                                </div>
-                                <div className={style.social_new_account_text}>
-                                    Google로 회원 가입
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className={style.form_new_account_area}>

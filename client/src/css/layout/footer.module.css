@@ -7,21 +7,6 @@
     padding: 50px 0;
 }
 
-.text_area {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    max-width: 1440px;
-}
-
-.text_box {
-    padding: 10px;
-}
-
-.text_value {
-    font-size: 10px;
-}
-
 @media (max-width: 768px) {
     .container {
         display: none;
