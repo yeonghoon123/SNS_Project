@@ -8,18 +8,6 @@ import {
     firebaseInstance,
 } from "./firebase";
 
-const screenModeSlice = createSlice({
-    name: "screenMode",
-    initialState: {
-        themeMode: "dark",
-    },
-    reducers: {
-        changeTheme: (state) => {
-            state.themeMode = state.themeMode === "dark" ? "light" : "dark";
-        },
-    },
-});
-
 const firebaseMethodSlice = createSlice({
     name: "firebaseMethod",
     initialState: {
@@ -39,7 +27,7 @@ const userAccountSlice = createSlice({
     reducers: {
         loginAccount: (state, action) => {
             state.isLogged = true;
-            state.account_info = action.payload.getUserData;
+            state.account_info = action.payload;
         },
         logoutAccount: (state) => {
             state.isLogged = false;
@@ -48,14 +36,11 @@ const userAccountSlice = createSlice({
     },
 });
 
-// Action creators are generated for each case reducer function
-export const { changeTheme } = screenModeSlice.actions;
 export const { loginAccount, logoutAccount } = userAccountSlice.actions;
 
 const store = configureStore(
     {
         reducer: {
-            screenMode: screenModeSlice.reducer,
             firebaseMethod: firebaseMethodSlice.reducer,
             userAccount: userAccountSlice.reducer,
         },

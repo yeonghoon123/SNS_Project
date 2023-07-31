@@ -1,15 +1,10 @@
 .container {
-    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    max-width: 935px;
+    position: relative;
+    left: 3%;
+    width: 935px;
     margin: 0 auto;
     padding: 30px 0;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding-bottom: 0;
-    }
 }

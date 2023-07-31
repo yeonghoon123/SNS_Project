@@ -80,22 +80,3 @@
     background-color: #fff;
     border-radius: 5px;
 }
-
-@media (max-width: 768px) {
-    .container {
-        margin-top: 40px;
-    }
-
-    .img_area {
-        display: none;
-    }
-
-    .form_area {
-        width: 100%;
-    }
-
-    .social_login_content {
-        width: 70%;
-        padding: 5px 5px;
-    }
-}

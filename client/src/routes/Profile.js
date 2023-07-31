@@ -1,7 +1,6 @@
 import React from "react";
 import style from "../css/profile/userInfo.module.css";
 import ProfileInfoDesktop from "../components/profile/ProfileInfoDesktop";
-import ProfileInfoMobile from "../components/profile/ProfileInfoMobile";
 import ProfilePost from "../components/profile/ProfilePost";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -25,9 +24,6 @@ const ProfilePage = () => {
         <section>
             <div className={style.container}>
                 <ProfileInfoDesktop
-                    props={{ userInfoTest, navigate, getUrlParams }}
-                />
-                <ProfileInfoMobile
                     props={{ userInfoTest, navigate, getUrlParams }}
                 />
                 <ProfilePost />

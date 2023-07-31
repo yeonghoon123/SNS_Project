@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../../../css/layout/header.module.css";
 import { HomeIcon, ReorderIcon } from "./IconTagList";
+import NewPost from "./NewPost";
 import { AddBox, NotificationsNone, Search } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
 
 const HeaderDesktop = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <div className={style.container}>
             <div className={style.menu_content_container}>
@@ -20,9 +22,13 @@ const HeaderDesktop = () => {
                         <Search fontSize="large" />
                         <span>검색</span>
                     </div>
-                    <div className={style.menu_content}>
+                    <div
+                        className={style.menu_content}
+                        onClick={() => setModalOpen(true)}
+                    >
                         <AddBox fontSize="large" />
                         <span>추가</span>
+                        <NewPost props={{ modalOpen, setModalOpen }} />
                     </div>
                     <div className={style.menu_content}>
                         <NotificationsNone fontSize="large" />
@@ -35,12 +41,7 @@ const HeaderDesktop = () => {
                         </a>
                     </div>
                 </div>
-                <div
-                    className={`${style.menu_content} ${style.menu_content_more}`}
-                >
-                    <ReorderIcon fontSize={"large"} />
-                    <span>더보기</span>
-                </div>
+                <ReorderIcon fontSize={"large"} />
             </div>
         </div>
     );

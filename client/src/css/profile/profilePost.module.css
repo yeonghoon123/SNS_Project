@@ -35,9 +35,3 @@
     height: 100%;
     object-fit: cover;
 }
-
-@media (max-width: 740px) {
-    .post_list_area {
-        gap: 3px;
-    }
-}

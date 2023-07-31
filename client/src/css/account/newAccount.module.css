@@ -82,20 +82,3 @@
     color: red;
     text-align: left;
 }
-
-@media (max-width: 850px) {
-    .img_area {
-        display: none;
-    }
-}
-
-@media (max-width: 450px) {
-    .form_area {
-        width: 100%;
-    }
-
-    .social_new_account_content {
-        width: 70%;
-        padding: 5px 5px;
-    }
-}

@@ -63,17 +63,3 @@
     width: 60px;
     margin: 0 auto;
 }
-
-@media (max-width: 740px) {
-    .userInfo_container,
-    .userMoreInfo_navbar_container {
-        display: none;
-    }
-    .profile_img_area img {
-        width: 77px;
-        height: 77px;
-    }
-    .post_list {
-        margin-bottom: 0;
-    }
-}
