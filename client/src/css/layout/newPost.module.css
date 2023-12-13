@@ -1,0 +1,24 @@
+.newPost_header {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+
+.newPost_header_back_page {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.newPost_header_next_page {
+    margin-left: auto;
+    font-size: 14px;
+    color: #1a7bdc;
+    cursor: pointer;
+}
+
+.newPost_body_container {
+    display: flex;
+    flex-direction: row;
+}

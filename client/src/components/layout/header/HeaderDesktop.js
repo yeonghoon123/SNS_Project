@@ -26,8 +26,6 @@ const HeaderDesktop = () => {
                         className={style.menu_content}
                         onClick={() => setModalOpen(true)}
                     >
-                        <AddBox fontSize="large" />
-                        <span>추가</span>
                         <NewPost props={{ modalOpen, setModalOpen }} />
                     </div>
                     <div className={style.menu_content}>

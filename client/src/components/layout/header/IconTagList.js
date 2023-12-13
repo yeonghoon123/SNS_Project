@@ -69,7 +69,7 @@ export const ReorderIcon = ({ fontSize }) => {
                 onClose={handleClose}
                 anchorOrigin={{
                     vertical: "center",
-                    horizontal: "top",
+                    horizontal: "center",
                 }}
                 transformOrigin={{
                     vertical: "center",
@@ -83,7 +83,7 @@ export const ReorderIcon = ({ fontSize }) => {
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding onClick={signOut}>
-                        <ListItemButton component="a" href="#simple-list">
+                        <ListItemButton>
                             <ListItemText primary="로그아웃" />
                         </ListItemButton>
                     </ListItem>
